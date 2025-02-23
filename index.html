@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .complexity-card {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <nav>
+        <div class="nav-brand">Algorithm Visualizer</div>
+        <div class="controls">
+            <div class="array-inputs">
+                <span>Size</span>
+                <input type="range" id="array-size" min="5" max="100" value="50">
+                <span>Speed</span>
+                <input type="range" id="speed" min="1" max="5" value="3">
+            </div>
+            <button id="randomize">New Array</button>
+            <select id="algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+            <button id="sort">Sort!</button>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button id="sound-toggle" class="sound-toggle">
+                <i class="fas fa-volume-up"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="bars" class="flex-container"></div>
+    </div>
+    <div id="info-section" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px; position: relative; right: 20px;">
+        <div class="complexity-card" style="width: 150px; border: 1px solid #000; border-radius: 5px; padding: 10px; background-color: #f9f9f9; box-shadow: none; color: #2c3e50;">
+            <h3>Time Complexity</h3>
+            <p id="complexity">O(n log n)</p>
+        </div>
+        <div class="complexity-card" style="width: 150px; border: 1px solid #000; border-radius: 5px; padding: 10px; background-color: #f9f9f9; box-shadow: none; color: #2c3e50;">
+            <h3>Space Complexity</h3>
+            <p id="space-complexity">O(1)</p>
+        </div>
+    </div>
+    <audio id="swap-sound" src="file:///C:/Users/hp/DS/Downloads/Final/audio.mp3" preload="auto"></audio>    <script src="algorithms.js"></script>
+    <script src="visualizer.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>
