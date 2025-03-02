@@ -1,3 +1,9 @@
+/**
+ * Sorting Algorithms for Visualizer
+ * Author: Antima Mishra
+ * Date: March 2025
+ * Custom implementation of sorting with animations
+ */
 export const bubbleSort = async (array, compare, swap) => {
   const n = array.length;
   for (let i = 0; i < n - 1; i++) {
