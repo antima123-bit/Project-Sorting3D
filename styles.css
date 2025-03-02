@@ -136,14 +136,16 @@ select {
     background-color: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: none; /* Removed 3D effect */
+    box-shadow: none;
     text-align: center;
-    color: #2c3e50; /* Darker text for better visibility */
-    width: 150px; /* Consistent width */
-    height: 300px; /* Reduced height */
-    right: 3px;
-    top: 50%;
-
+    color: #2c3e50;
+    width: 180px; /* Ensures box remains stable */
+    min-height: 80px; /* Prevents shrinking when text updates */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 input[type="range"] {
