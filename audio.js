@@ -1,3 +1,9 @@
+/**
+ * Sorting Algorithms for Visualizer
+ * Author: Antima Mishra
+ * Date: March 2025
+ * Custom implementation of sorting with animations
+ */
 class AudioManager {
     constructor() {
         this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
