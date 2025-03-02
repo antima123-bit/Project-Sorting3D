@@ -1,3 +1,9 @@
+/**
+ * Sorting Algorithms for Visualizer
+ * Author: Antima Mishra
+ * Date: March 2025
+ * Custom implementation of sorting with animations
+ */
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Box, Container, Paper, Typography, Button, Slider, Select, MenuItem, AppBar, Toolbar, useTheme } from '@mui/material';
 import { styled } from '@mui/material/styles';
